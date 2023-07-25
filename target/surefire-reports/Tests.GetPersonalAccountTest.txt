@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Tests.GetPersonalAccountTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 33.755 s <<< FAILURE! - in Tests.GetPersonalAccountTest
+getInPersonalAccount(Tests.GetPersonalAccountTest)  Time elapsed: 33.707 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg">...</button> is not clickable at point (1228, 440). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=114.0.5735.248)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4.1', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b756cff529a8d73f85c4b894b7992c0a, clickElement {id=4CFA9C38D086D21228D56D6319188280_element_3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.248, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/z9/cwb0qkg12d9...}, goog:chromeOptions: {debuggerAddress: localhost:53875}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53875/devtoo..., se:cdpVersion: 114.0.5735.248, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (b756cff529a8d73f85c4b894b7992c0a)] -> xpath: //button[text()='Войти в аккаунт']]
+Session ID: b756cff529a8d73f85c4b894b7992c0a
+	at Tests.GetPersonalAccountTest.setUp(GetPersonalAccountTest.java:30)
+

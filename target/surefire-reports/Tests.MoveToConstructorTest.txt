@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Tests.MoveToConstructorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 47.038 s <<< FAILURE! - in Tests.MoveToConstructorTest
+getConstructorOnClickLogo(Tests.MoveToConstructorTest)  Time elapsed: 21.263 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <div class="AppHeader_header__logo__2D0X2">...</div> is not clickable at point (720, 44). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=114.0.5735.248)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4.1', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93f7ec16c92d908452c1a248d737c6ce, clickElement {id=18D0E242456B46E6314FBF0CCE071E9C_element_70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.248, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/z9/cwb0qkg12d9...}, goog:chromeOptions: {debuggerAddress: localhost:54137}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54137/devtoo..., se:cdpVersion: 114.0.5735.248, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (93f7ec16c92d908452c1a248d737c6ce)] -> xpath: //div[@class='AppHeader_header__logo__2D0X2']]
+Session ID: 93f7ec16c92d908452c1a248d737c6ce
+	at Tests.MoveToConstructorTest.getConstructorOnClickLogo(MoveToConstructorTest.java:38)
+
