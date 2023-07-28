@@ -3,50 +3,38 @@ package Tests;
 import Pages.LoginPage;
 import Pages.MainPage;
 import Pages.PersonalAccount;
-import constance.Constance;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
+import constance.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
 
-public class MoveToConstructorTest {
-    private WebDriver driver;
+
+public class MoveToConstructorTest extends BaseTest {
     private LoginPage loginPage;
     private MainPage mainPage;
     private PersonalAccount personalAccount;
-    @Before
-    public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get(Constance.MAINPAGE_URL);
-        loginPage = new LoginPage(driver);
-        mainPage = new MainPage(driver);
+
+    @Test
+    public void getConstructorOnClickLogo(){
+        loginPage = new LoginPage();
+        mainPage = new MainPage();
         mainPage.clickLoginOnMainPage();
         loginPage.login();
         mainPage.getInPersonalAccount();
-    }
-    @Test
-    public void getConstructorOnClickLogo(){
-        personalAccount = new PersonalAccount(driver);
-        mainPage = new MainPage(driver);
+        personalAccount = new PersonalAccount();
+        mainPage = new MainPage();
         personalAccount.clickLogo();
         mainPage.getCreateBurger();
     }
     @Test
     public void getConstructorOnClickConstructor(){
-        personalAccount = new PersonalAccount(driver);
-        mainPage = new MainPage(driver);
+        loginPage = new LoginPage();
+        mainPage = new MainPage();
+        mainPage.clickLoginOnMainPage();
+        loginPage.login();
+        mainPage.getInPersonalAccount();
+        personalAccount = new PersonalAccount();
+        mainPage = new MainPage();
         personalAccount.clickConstructor();
         mainPage.getCreateBurger();
-    }
-    @After
-    public void tearDown(){
-        driver.quit();
     }
 }

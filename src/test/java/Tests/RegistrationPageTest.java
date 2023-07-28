@@ -1,30 +1,17 @@
 package Tests;
 
+import Pages.LoginPage;
+import Pages.MainPage;
 import Pages.RegistrationPage;
-import constance.Constance;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
+import constance.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
 
-public class RegistrationPageTest {
-    private WebDriver driver;
-    @Before
-    public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(Constance.REGISTRATION_URL);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    }
+public class RegistrationPageTest extends BaseTest {
     @Test
     public void getPositiveRegistration(){
-        RegistrationPage r = new RegistrationPage(driver);
+        RegistrationPage r = new RegistrationPage();
         r.setName();
         r.setEmail();
         r.setOkPassword();
@@ -33,15 +20,11 @@ public class RegistrationPageTest {
     }
     @Test
     public void getFailRegistration(){
-        RegistrationPage r = new RegistrationPage(driver);
+        RegistrationPage r = new RegistrationPage();
         r.setName();
         r.setEmail();
         r.setFailPassword();
         r.clickRegistrationButton();
         r.getAlertMessageWithFailPassword();
-    }
-    @After
-    public void tearDown(){
-        driver.quit();
     }
 }

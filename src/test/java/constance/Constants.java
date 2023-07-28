@@ -2,7 +2,7 @@ package constance;
 import org.apache.commons.lang3.RandomStringUtils;
 
 
-public class Constance {
+public class Constants {
 
     public static String NAME = RandomStringUtils.randomAlphabetic(3,5);
     public static String EMAIL = RandomStringUtils.randomAlphabetic(3,5) + "@gmail.com";
@@ -18,5 +18,5 @@ public class Constance {
     public static String FORGOR_PASSWORD_URL = "https://stellarburgers.nomoreparties.site/forgot-password";
     public static String PROFILE_TEXT = "Профиль";
     public static String CREATE_BURGER = "Соберите бургер";
-    public static String BURGER_COMPONENTS;
+
 }
